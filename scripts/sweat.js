@@ -2,6 +2,7 @@
 // list of thing make you sweat (objects)
 
 import { getSweat } from "./database.js";
+import { getRandom } from "./utility.js";
 
 // { name: "", "sweat_level": number, "willItDehydrate": boolean, "remedy": "string"}
 
@@ -22,14 +23,18 @@ import { getSweat } from "./database.js";
 // Click on word to get details
 
 export const sweatList = () => {
-  const sweatData = getSweat();
+  const sweatData = getRandom(getSweat(), 5);
 
   let htmlString = `<article class="sweatList">`;
 
   for (const sweat of sweatData) {
     htmlString += `
-            <section class="sweatCard">
-                <img src="" alt="Sweat placeholder" />
+            <section class="sweatCard" style="background-image:url(${
+              sweat.image
+            });">
+                <img id=sweat-image--${
+                  sweatData.indexOf(sweat) + 1
+                } src="" alt="Sweat placeholder" />
                 <h1 class="headSweat">${sweat.name}</h1>
                 <p class="sweatLevel">Sweat Level: ${sweat.sweat_level}</p>
                 <p class="dehydrate">${
