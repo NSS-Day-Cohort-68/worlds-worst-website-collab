@@ -25,7 +25,8 @@ import { getRandom } from "./utility.js";
 export const sweatList = () => {
   const sweatData = getRandom(getSweat(), 5);
 
-  let htmlString = `<article class="sweatList">`;
+  let htmlString = `<article class="sweatList">
+  <h2>Sweat</h2>`;
 
   for (const sweat of sweatData) {
     htmlString += `
