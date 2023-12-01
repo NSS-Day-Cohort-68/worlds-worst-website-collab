@@ -1,3 +1,38 @@
-#test {
-    color: red
+.sweatList, .tearsList, .bloodList {
+    display: flex;
+}
+
+.sweatCard {
+border: 5px solid green;
+padding: 12px;
+margin: 8px;
+border-radius: 50%;
+background-size: 120%;
+background-repeat: no-repeat;
+}
+
+.bloodCard{
+border: 5px solid red;
+padding: 12px;
+margin: 8px;
+border-radius: 50%;
+background-size: 120%;
+background-repeat: no-repeat;
+}
+
+.tearCard {
+border: 5px solid blue;
+padding: 12px;
+margin: 8px;
+border-radius: 50%;
+background-size: 120%;
+background-repeat: no-repeat;
+}
+
+p h1 img {
+    padding: 30px
+}
+
+body {
+    text-align: center;
 }
